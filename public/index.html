@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <meta charset="UTF-8">
+	<title>wsping</title>
+</head>
+<body>
+	<H1>Your ping is <span id="ping">measuring...</span></H1>
+
+	<script>
+		var pingTime = 0;
+
+		var ping = function () {
+			pingTime = (new Date()).getTime();
+			socket.emit('ping', pingTime);
+		};
+
+		$(function() {
+			var socket = io.connect(window.location.hostname);
+			
+			socket.on('pong', function () {
+				var pongTime = (new Date()).getTime();
+				$("#ping").html((pongTime - pingTime) + " ms");
+				ping();
+			});
+
+			ping();
+		});
+	</script>
+
+</body>
+</html>

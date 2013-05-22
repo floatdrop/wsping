@@ -1,0 +1,22 @@
+{
+  "name": "wsping",
+  "version": "0.0.1",
+  "private": false,
+  "description" : "NodeJs Express app for testing ping via websockets",
+  "main": "server/js",
+  "subdomain": "wsping",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/floatdrop/wsping"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "socket.io": "*"
+  },
+  "engines": {
+    "node": ">=0.8"
+  }
+}
