@@ -1,12 +1,12 @@
 {
   "name": "wsping",
-  "version": "0.0.1",
+  "version": "0.0.1-2",
   "private": false,
-  "description" : "NodeJs Express app for testing ping via websockets",
+  "description": "NodeJs Express app for testing ping via websockets",
   "main": "server/js",
-  "subdomain": "wsping",
+  "subdomain": "testws",
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node ./app.js"
   },
   "repository": {
     "type": "git",
