@@ -4,7 +4,7 @@
   "private": false,
   "description": "NodeJs Express app for testing ping via websockets",
   "main": "server/js",
-  "subdomain": "testws",
+  "subdomain": "wsping",
   "scripts": {
     "start": "node ./app.js"
   },
